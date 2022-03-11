@@ -33,7 +33,7 @@ function getURL() {
 function UrlExists(url) {
 
     var http = new XMLHttpRequest();
-    http.open('HEAD', url, false);
+    http.open('GET', url, false);
     http.setRequestHeader('Access-Control-Allow-Origin', '*');
     http.send();
 
