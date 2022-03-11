@@ -18,8 +18,8 @@ function getURL() {
             var thumbDiv = document.getElementById("thumbnails");
             thumbDiv.innerHTML = "";
 
-            UrlExists(endMax)
-            UrlExists(endHQ)
+            crateImage(endMax)
+            crateImage(endHQ)
 
         }
 
@@ -30,8 +30,7 @@ function getURL() {
     }
 }
 
-function UrlExists(url) {
-
+/*function UrlExists(url) {
     var http = new XMLHttpRequest();
     http.open('GET', url, false);
     http.setRequestHeader('Access-Control-Allow-Origin', '*');
@@ -44,15 +43,20 @@ function UrlExists(url) {
         img.src = url;
         document.getElementById('thumbnails').appendChild(img);
 
-
     } else {
 
     }
+}*/
+
+
+function crateImage(url){
+    var img = document.createElement('img');
+    img.src = url;
+    document.getElementById('thumbnails').appendChild(img);
 }
 
 function showHelp(){
 
     alert("Just paste the youtube link on the input box")
-
 
 }
