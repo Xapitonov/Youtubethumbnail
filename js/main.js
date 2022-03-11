@@ -35,6 +35,7 @@ function UrlExists(url) {
     var http = new XMLHttpRequest();
     http.open('GET', url, false);
     http.setRequestHeader('Access-Control-Allow-Origin', '*');
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     http.send();
 
     if (http.status != 404) {
